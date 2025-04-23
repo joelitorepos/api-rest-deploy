@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.json());
+
 // app.use(cors()); esto sirve para solucionar el problema de CORS en todos los origenes
 // app.use(cors());
 const movieSchema = z.object({
@@ -37,6 +38,8 @@ app.use(cors({
         return callback(new Error('CORS no permitido'))
     }
 }));
+
+app.use(express.static('web'));
 
 // Funciones de validación
 const validar = (input) => movieSchema.safeParse(input);

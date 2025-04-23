@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "title": "The Last Stand",
+      "year": 2015,
+      "director": "John Smith",
+      "duration": 120,
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBJFQ3wCKVi_RSOPndOQyvO-6yooAIb1rScQ&s",
+      "genre": "Action",
+      "rate": 7.5
+    },
+    {
+      "id": 2,
+      "title": "Love in the City",
+      "year": 2018,
+      "director": "Emily Johnson",
+      "duration": 95,
+      "poster": "https://postercinema.eu/cdn/shop/files/daedosiui-salangbeob_o6kitvl9.jpg?v=1728415438",
+      "genre": "Romance",
+      "rate": 6.8
+    },
+    {
+      "id": 3,
+      "title": "Mystery of the Lost Island",
+      "year": 2005,
+      "director": "Michael Brown",
+      "duration": 110,
+      "poster": "https://m.media-amazon.com/images/S/pv-target-images/c0b9011b4c630fa0f321854bde2cafd2a34cd099b77bafe3b3e24f93b43eb9d1.jpg",
+      "genre": "Adventure",
+      "rate": 8.2
+    },
+    {
+      "id": 4,
+      "title": "Haunted Dreams",
+      "year": 2010,
+      "director": "Sarah Lee",
+      "duration": 100,
+      "poster": "https://thebookcoverdesigner.com/wp-content/uploads/2021/09/Front.jpg",
+      "genre": "Terror",
+      "rate": 5.9
+    },
+    {
+      "id": 5,
+      "title": "Space Odyssey 3000",
+      "year": 2020,
+      "director": "David Clarke",
+      "duration": 130,
+      "poster": "https://m.media-amazon.com/images/I/61VMT6lqBDL._AC_UF894,1000_QL80_.jpg",
+      "genre": "Sci-Fi",
+      "rate": 8.7
+    },
+    {
+      "id": 6,
+      "title": "The Great Escape",
+      "year": 1995,
+      "director": "Robert Taylor",
+      "duration": 115,
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh4iLRXxqxqDiA56cW3vYyew1XbmytcTEEXA&s",
+      "genre": "Thriller",
+      "rate": 7.3
+    },
+    {
+      "id": 7,
+      "title": "Comedy Night",
+      "year": 2012,
+      "director": "Lisa Wong",
+      "duration": 90,
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYftX_vCdUrj7wTvP5ZhSsOQbERsY4Abu8_w&s",
+      "genre": "Comedy",
+      "rate": 6.5
+    },
+    {
+      "id": 8,
+      "title": "Historical Journey",
+      "year": 2000,
+      "director": "James Anderson",
+      "duration": 140,
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAnpq8grR488O1uREQCogwwutwmrRq4PCxew&s",
+      "genre": "Drama",
+      "rate": 7.8
+    },
+    {
+      "id": 9,
+      "title": "Animated Adventures",
+      "year": 2019,
+      "director": "Karen Martinez",
+      "duration": 85,
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf_o_hAs4QYCA6pIdsjUHY8AGGRuvjI-Crig&s",
+      "genre": "Animation",
+      "rate": 8.0
+    },
+    {
+      "id": 10,
+      "title": "The Final Chapter",
+      "year": 2023,
+      "director": "Steven Green",
+      "duration": 125,
+      "poster": "https://i.ebayimg.com/00/s/MTYwMFgxMDI1/z/mckAAOSwrklU9Kvo/$_57.JPG?set_id=880000500F",
+      "genre": "Action",
+      "rate": 7.9
+    }
+  ]

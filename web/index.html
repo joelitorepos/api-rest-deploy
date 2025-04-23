@@ -1,63 +1,42 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Victor Joel">
-    <title>API REST</title>
-    <style>
-        body {
-            background-color: #12122f;
-        }
-        img {
-            width: 200px;
-            height: 200px;
-        }
-    </style>
-    <script type="module">
-        fetch('http://localhost:3000/movies')
-            .then(res => res.json())
-            .then(movies => {
-                const html = movies.map(movie => {
-                    return `<article data-id="${movie.id}">
-                                <h2>${movie.title}</h2>
-                                <p>${movie.year}</p>
-                                <img src="${movie.poster}" alt="${movie.title}">
-                                <button>Eliminar</button>
-                            </article>`;
-                }).join('');
-                document.querySelector('main').innerHTML = html;
-
-                document.addEventListener('click', event => {
-                    if (event.target.matches('button')) {
-                        const article = event.target.closest('article');
-                        const id = article.dataset.id;
-                        fetch(`http://localhost:3000/movies/${id}`, {
-                            method: 'DELETE'
-                        })
-                            .then(res => {
-                                if (res.ok) {
-                                    article.remove();
-                                } else {
-                                    return res.json().then(data => {
-                                        throw new Error(data.error || 'Error deleting movie');
-                                    });
-                                }
-                            })
-                            .catch(error => {
-                                console.error('Error deleting movie:', error);
-                                alert('No se pudo eliminar la película: ' + error.message);
-                            });
-                    }
-                });
+<script type="module">
+    fetch('/movies') // Cambia 'http://localhost:3000/movies' a '/movies'
+      .then(res => res.json())
+      .then(movies => {
+        const html = movies.map(movie => {
+          return `<article data-id="${movie.id}">
+                    <h2>${movie.title}</h2>
+                    <p>${movie.year}</p>
+                    <img src="${movie.poster}" alt="${movie.title}">
+                    <button>Eliminar</button>
+                  </article>`;
+        }).join('');
+        document.querySelector('main').innerHTML = html;
+  
+        document.addEventListener('click', event => {
+          if (event.target.matches('button')) {
+            const article = event.target.closest('article');
+            const id = article.dataset.id;
+            fetch(`/movies/${id}`, { // Cambia 'http://localhost:3000/movies/${id}' a '/movies/${id}'
+              method: 'DELETE'
             })
-            .catch(error => {
-                console.error('Error fetching movies:', error);
-                document.querySelector('main').innerHTML = '<p>Error al cargar las películas</p>';
-            });
-    </script>
-</head>
-<body>
-    <main></main>
-</body>
-</html>
+              .then(res => {
+                if (res.ok) {
+                  article.remove();
+                } else {
+                  return res.json().then(data => {
+                    throw new Error(data.error || 'Error deleting movie');
+                  });
+                }
+              })
+              .catch(error => {
+                console.error('Error deleting movie:', error);
+                alert('No se pudo eliminar la película: ' + error.message);
+              });
+          }
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching movies:', error);
+        document.querySelector('main').innerHTML = '<p>Error al cargar las películas</p>';
+      });
+  </script>

@@ -9,7 +9,7 @@
     <main></main>
 
     <script>
-        fetch('http://localhost:10000/movies')  // Cambiado a puerto 10000
+        fetch('/movies')  
           .then(res => res.json())
           .then(movies => {
             const html = movies.map(movie => {
@@ -26,7 +26,7 @@
               if (event.target.matches('button')) {
                 const article = event.target.closest('article');
                 const id = article.dataset.id;
-                fetch(`http://localhost:10000/movies/${id}`, {  // Cambiado a puerto 10000
+                fetch(`/movies/${id}`, {  // Cambiado a puerto 10000
                   method: 'DELETE'
                 })
                   .then(res => {

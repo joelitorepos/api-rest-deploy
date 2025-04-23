@@ -139,3 +139,4 @@ app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
 
+// http://localhost:10000/movies

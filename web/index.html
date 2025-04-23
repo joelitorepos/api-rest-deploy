@@ -1,5 +1,5 @@
-<script type="module">
-    fetch('/movies') // Cambia 'http://localhost:3000/movies' a '/movies'
+<script>
+    fetch('/movies')
       .then(res => res.json())
       .then(movies => {
         const html = movies.map(movie => {
@@ -16,7 +16,7 @@
           if (event.target.matches('button')) {
             const article = event.target.closest('article');
             const id = article.dataset.id;
-            fetch(`/movies/${id}`, { // Cambia 'http://localhost:3000/movies/${id}' a '/movies/${id}'
+            fetch(`/movies/${id}`, {
               method: 'DELETE'
             })
               .then(res => {
